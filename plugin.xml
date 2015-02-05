@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.snipme.record"
+      version="0.1.0">
+    <name>ImageDownloader</name>
+    <description>Phone gap plugin for Image downloader</description>
+    <license>MIT</license>
+    <keywords>phonegap,image downloader</keywords>
+
+    <js-module src="www/ImageDownloader.js" name="ImageDownloader">
+        <clobbers target="window.ImageDownloader" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ImageDownloader">
+                <param name="android-package" value="com.snipme.download.ImageDownloader"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/ImageDownloader.java" target-dir="src/com/snipme/download" />      
+     </platform>          
+</plugin>
