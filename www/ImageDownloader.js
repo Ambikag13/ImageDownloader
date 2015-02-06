@@ -1,7 +1,7 @@
 var ImageDownloader = {
     downloadImage: function(successCallback, errorCallback, options) {
 
-        //var assets = null;
+        var assets = null;
         
         if (options) {
         	assets = options.assets;
